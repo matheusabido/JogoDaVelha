@@ -56,7 +56,14 @@ public class JogoDaVelha {
                 g.setColor(Color.red);
                 g.drawString(venceuText, x, y);
             } else if (vencedor == 0) {
-
+                String empate = "EMPATE";
+                int size = g.getFontMetrics().stringWidth(empate);
+                int x = frame.getContentPane().getWidth() / 2 - size / 2;
+                int y = frame.getContentPane().getHeight() / 2 + SHAPE_SIZE / 2;
+                g.setColor(new Color(0, 0, 0, 255/2));
+                g.fillRect(x - 5, y - SHAPE_SIZE, size + 10, SHAPE_SIZE + 15);
+                g.setColor(Color.red);
+                g.drawString(empate, x, y);
             }
         }
 
